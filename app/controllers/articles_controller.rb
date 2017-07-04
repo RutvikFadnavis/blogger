@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+	before_filter :require_login, only: [:destroy, :edit, :update, :new, :create]
 
 	include ArticlesHelper
 
